@@ -108,3 +108,52 @@ declare module "*.svg" {
 }
 ```
 
+Now we can import svg files just like normal javascript modules. Create a separate folder named assets in your project root and save the [dragon svg](https://freesvg.org/1526510831). Rename the file to dragon.svg to make it easier to import.
+
+<img width="1000" alt="Simulator running our app with our dragon svg file filled with blue" src="https://raw.githubusercontent.com/vinipachecov/rn-typescript-svg-setup/master/tutorial-images/creating-folder-and-image.png">
+
+Now you can import your files and use all feature [react-native-svg] provides to svg files. Here is my example from the dragon file:
+
+```ts
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
+import React, {ReactNode} from 'react';
+import {SafeAreaView, StyleSheet, View, StatusBar} from 'react-native';
+import DragonSvg from './assets/dragon.svg';
+
+const App: () => ReactNode = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <View style={styles.body}>
+          <DragonSvg height={400} width={400} fill="blue" />
+        </View>
+      </SafeAreaView>
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  body: {
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+});
+
+export default App;
+```
+Running our app on a simulator should result:
+
+
+<img width="400" alt="Simulator running our app with our dragon svg file filled with blue" src="https://raw.githubusercontent.com/vinipachecov/rn-typescript-svg-setup/master/tutorial-images/result.png">
+
+The full code of this tutorial is in my github repository [here](https://github.com/vinipachecov/rn-typescript-svg-setup). Now your app is capable of importing svg files correctly with Typescript!
