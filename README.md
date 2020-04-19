@@ -5,8 +5,8 @@ For this tutorial I'll use [react-native-svg](https://github.com/react-native-co
 
 
 ## Steps
-        * [Setup from Scratch](#setup-from-scratch)
-        * [Svg setup](#svg-setup)
+  * [Setup from Scratch](#setup-from-scratch)
+  * [Svg setup](#svg-setup)
 
 ### Setup from Scratch 
 
