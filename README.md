@@ -99,7 +99,7 @@ module.exports = (async () => {
 })();
 ```
 If you try to import files from here you will be able but typescript will give you ts error saying that your svg file could not be found.
-Create a declations.d.ts file in the root of your project if you don't have yet. Paste the following code:
+Create a declarations.d.ts file in the root of your project if you don't have yet. Paste the following code:
 ```ts
 declare module "*.svg" {
   import { SvgProps } from "react-native-svg";
